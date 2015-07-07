@@ -2,18 +2,25 @@
     <link rel="icon" sizes="16x16" href="/favicon.ico">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Meteor Boiler-Plate</title>
+    <title>Quorator</title>
     <meta name="description" content="" />
   <meta name="google-site-verification" content="" />
 </head>
 
 <template name="layout">
-    {{> header}}
-    <div class="container">
-      <div id="wrapper">
-        <div id="content">
-          {{> yield }}
-        </div>
-      </div>
-    </div><!-- /.container -->
+    <header class="main-header">
+        {{> yield "header"}}
+    </header>
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            {{> yield "side_menu"}}
+        </section>
+    </aside>
+    <div class="content-wrapper row-offcanvas row-offcanvas-left">
+        <section class="content">
+            <div class="container-fluid">
+                {{> yield}}
+            </div>
+        </section>
+    </div>
 </template>
