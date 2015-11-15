@@ -1,28 +1,30 @@
 <template name="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{pathFor 'home.page'}}">Meteor Boiler-Plate</a>
+          <span class="navbar-brand">
+            <a href="/">Product Test</a>
+          </span>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Tab</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class=""><a href="/">Home</a></li>
           </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Choose your account service</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+          {{#if currentUser}}
+            <ul class="nav navbar-nav navbar-right">
+              <button type="button" class="btn btn-default navbar-btn" id="logout">Logout</button>
+            </ul>
+          {{/if}}
+        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 </template>
-
-
