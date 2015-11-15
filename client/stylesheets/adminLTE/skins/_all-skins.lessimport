@@ -1,7 +1,0 @@
-//All skins in one file
-@import "skin-blue.lessimport";
-@import "skin-black.lessimport";
-@import "skin-green.lessimport";
-@import "skin-red.lessimport";
-@import "skin-yellow.lessimport";
-@import "skin-purple.lessimport";

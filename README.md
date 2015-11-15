@@ -5,13 +5,15 @@ This is a simple boilerplate structure for typical meteor projects. Includes iro
 
 ## <a name="included-packages"></a> Included Packages
 
+* Meteor Version:
+  * 1.2.1
 * Router:
   * [iron:router](https://github.com/EventedMind/iron-router)
 * Coffeescript
 * meteorhacks:npm
   * Use npm modules with your Meteor App
-* Kadira
-  * Performance Monitoring for Meteor
+* Collection2
+  * A Meteor package that allows you to attach a schema to a Mongo.Collection by @aldeed
 * [Less](http://lesscss.org)
   * [Bootstrap](http://getbootstrap.com)
   * [Font Awesome](http://fontawesome.io)
@@ -19,6 +21,8 @@ This is a simple boilerplate structure for typical meteor projects. Includes iro
   * [Moment.js](http://momentjs.com/)
 * UI:
   * [sacha:spin](https://github.com/SachaG/meteor-spin/)
+* Meteor-useraccounts:
+  * Easily add accounts templates to your project, writing just a very few lines of code.(http://useraccounts.meteor.com/)
 
 ## <a name="file-structure"></a> File Structure
 
@@ -30,18 +34,19 @@ client/
   ├── helpers/
   ├── lib/
   └── stylesheets/
-    ├── bootstrap-3.2.0/
-    ├── font-awesome-4.2.0/
     ├── style.less
   └── views/
     └── layouts/
+      layout.html
     └── includes/
+    └── errors/
+    home.html
 both/
   ├── collections/
+  ├── config/
   router.coffee
 packages/
 public/
- ├── font-awesome-4.2.0/
 server/
   ├── publications.coffee
 ```
